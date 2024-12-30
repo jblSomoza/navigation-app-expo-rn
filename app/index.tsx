@@ -3,8 +3,8 @@ import React from 'react'
 
 const App = () => {
   return (
-    <View>
-      <Text>App</Text>
+    <View className='mt-10'>
+      <Text>HelloWave</Text>
     </View>
   )
 }
