@@ -15,6 +15,13 @@ const HomeScreen = () => {
         </CustomButton>
         </Link>
 
+        <Link href='/products' asChild>
+
+        <CustomButton color='primary' onPress={() => router.push('/products') } variant='text-only'>
+          Hola mundo
+        </CustomButton>
+        </Link>
+
         {/* <Link className='mb-5' href={'/settings'}>Settings</Link>
         <Link className='mb-5' href={'/products'}>Products</Link>
         <Link className='mb-5' href={'/profile'}>Profile</Link> */}
