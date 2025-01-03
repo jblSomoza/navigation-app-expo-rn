@@ -1,12 +1,31 @@
-import { View, Text } from 'react-native'
+import { View, Text, FlatList } from 'react-native'
 import React from 'react'
 
-const products = () => {
+import { products } from "@/store/products.store";
+import { Link } from 'expo-router';
+ 
+const ProductsScreen = () => {
   return (
-    <View>
-      <Text>products</Text>
+    <View className='flex flex-1 px-4'>
+      <FlatList
+        data={ products }
+        keyExtractor={ item => item.id }
+        renderItem={({ item }) => (
+          <View className='mt-10'>
+            <Text className='text-2xl font-work-black'>{ item.title }</Text>
+            <Text className='text-lg font-work-medium'>{ item.description }</Text>
+
+            <View className='flex flex-row justify-between mt-4'>
+              <Text className='text-lg font-work-bold'>{ item.price }</Text>
+              <Link href={`/(stack)/products/${ item.id }`}>
+              <Text className='text-lg font-work-bold text-blue-500'>Ver más</Text>
+              </Link>
+            </View>
+          </View>
+        )}
+      />
     </View>
   )
 }
 
-export default products
+export default ProductsScreen

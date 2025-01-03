@@ -18,7 +18,7 @@ const HomeScreen = () => {
           onPress={() => router.navigate("/products")}
           color="primary"
         >
-          View Products
+          Products
         </CustomButton>
 
         <CustomButton
@@ -26,7 +26,7 @@ const HomeScreen = () => {
           onPress={() => router.navigate("/products")}
           color="secondary"
         >
-          About Us
+          Products
         </CustomButton>
 
         <CustomButton
