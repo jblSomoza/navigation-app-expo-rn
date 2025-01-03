@@ -42,7 +42,7 @@ const CustomButton = React.forwardRef(({ children, color = 'primary', onPress, o
         onLongPress={ onLongPress }
         ref={ref}
     >
-        <Text className='text-white text-center font-work-medium'>Hola Mundo</Text>
+        <Text className='text-white text-center font-work-medium'> { children } </Text>
     </Pressable>
   )
 })
