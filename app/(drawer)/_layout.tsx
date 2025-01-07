@@ -11,7 +11,7 @@ const DrawerLayout = () => {
       <Drawer
         drawerContent={CustomDrawer}
         screenOptions={{
-          headerShown: false,
+          // headerShown: false,
           overlayColor: "rgba(0,0,0,0.4)", // This is the color of the overlay when the drawer is open
           drawerActiveTintColor: "indigo", // This is the color of the text when the drawer is open
           sceneStyle: {
@@ -23,6 +23,7 @@ const DrawerLayout = () => {
         <Drawer.Screen
           name="(tabs)" // This is the name of the page and must match the url from root
           options={{
+            headerShown: false,
             drawerLabel: "Tabs + Stack",
             title: "Tabs + Stack",
             drawerIcon: ({ color, size }) => (
