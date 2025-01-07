@@ -15,7 +15,7 @@ const HomeScreen = () => {
 
         <CustomButton
           className="mt-5"
-          onPress={() => router.navigate("/drawer/tabs/(stack)/products")}
+          onPress={() => router.navigate("/products")}
           color="primary"
         >
           Products
@@ -23,7 +23,7 @@ const HomeScreen = () => {
 
         <CustomButton
           className="mt-2"
-          onPress={() => router.navigate("/drawer/tabs/(stack)/profile")}
+          onPress={() => router.navigate("/profile")}
           color="secondary"
         >
           Products
@@ -32,14 +32,14 @@ const HomeScreen = () => {
         <CustomButton
           className="mt-2"
           variant="text-only"
-          onPress={() => router.navigate("/drawer/tabs/(stack)/settings")}
+          onPress={() => router.navigate("/settings")}
           color="tertiary"
         >
           Settings
         </CustomButton>
 
         <Link
-          href={'/drawer/tabs/products'} asChild
+          href={'/products'} asChild
         >
           <CustomButton variant="text-only" color="primary" className="mt-2">
             Products
