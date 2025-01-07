@@ -1,4 +1,4 @@
-import { router } from "expo-router";
+import { Link, router } from "expo-router";
 import { View, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -15,7 +15,7 @@ const HomeScreen = () => {
 
         <CustomButton
           className="mt-5"
-          onPress={() => router.navigate("/products")}
+          onPress={() => router.navigate("/tabs/(stack)/products")}
           color="primary"
         >
           Products
@@ -23,7 +23,7 @@ const HomeScreen = () => {
 
         <CustomButton
           className="mt-2"
-          onPress={() => router.navigate("/products")}
+          onPress={() => router.navigate("/tabs/(stack)/profile")}
           color="secondary"
         >
           Products
@@ -32,11 +32,19 @@ const HomeScreen = () => {
         <CustomButton
           className="mt-2"
           variant="text-only"
-          onPress={() => router.navigate("/settings")}
+          onPress={() => router.navigate("/tabs/(stack)/settings")}
           color="tertiary"
         >
           Settings
+        </CustomButton>
+
+        <Link
+          href={'/tabs/(stack)/products'} asChild
+        >
+          <CustomButton variant="text-only" color="primary" className="mt-2">
+            Products
           </CustomButton>
+        </Link>
 
       </View>
     </SafeAreaView>
