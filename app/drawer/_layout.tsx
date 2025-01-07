@@ -3,11 +3,13 @@ import React from 'react'
 import { Drawer } from 'expo-router/drawer';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Ionicons } from '@expo/vector-icons';
+import CustomDrawer from '@/components/shared/CustomDrawer';
 
 const DrawerLayout = () => {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Drawer
+        drawerContent={ CustomDrawer}
         screenOptions={{
           overlayColor: 'rgba(0,0,0,0.4)', // This is the color of the overlay when the drawer is open
           drawerActiveTintColor: 'indigo', // This is the color of the text when the drawer is open
